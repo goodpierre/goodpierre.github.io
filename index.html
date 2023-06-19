@@ -1,1 +1,1587 @@
-yo la team
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Pierre GOUDET</title>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="/image/favicon.svg">
+
+    <!--Less-->
+    <link rel="stylesheet/less" type="text/css" href="styles.less"/>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+    <!--Javascript-->
+    <script src="script.js" type="text/javascript"></script>
+
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <!--Boostrap 4 Only grid and flex-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-grid.min.css"/>
+
+    <!--Typography-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<!--Body-->
+<body class="color-change-3x darkable dark-mode">
+
+<!--Loader-->
+<div id="loader" class="no-scroll">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</div>
+
+<!--Header-->
+<header class="d-flex align-items-center justify-content-between">
+    <!--Navbar-->
+    <nav class="d-flex align-items-center">
+        <span class="material-icons">menu</span>
+        <svg class="darkable dark-mode" onclick="toggleDivs(1)" id="btn1" xmlns="http://www.w3.org/2000/svg" width="138"
+             height="26" viewBox="0 0 138 26">
+            <g id="Groupe_20" data-name="Groupe 20" transform="translate(-186 564)">
+                <g id="Groupe_19" data-name="Groupe 19">
+                    <path id="PierreGoudet"
+                          d="M3.625,0h-2.5V-16.675h3.5a7.066,7.066,0,0,1,2.025.25,2.81,2.81,0,0,1,1.338.837,3.526,3.526,0,0,1,.738,1.512A9.792,9.792,0,0,1,8.95-11.8a9.957,9.957,0,0,1-.225,2.288,3.53,3.53,0,0,1-.738,1.525A2.81,2.81,0,0,1,6.65-7.15a7.066,7.066,0,0,1-2.025.25h-1Zm.8-9.225a3.759,3.759,0,0,0,1-.113,1.168,1.168,0,0,0,.625-.4,1.754,1.754,0,0,0,.313-.787A7.624,7.624,0,0,0,6.45-11.8a7.438,7.438,0,0,0-.087-1.25,1.754,1.754,0,0,0-.312-.787,1.168,1.168,0,0,0-.625-.4,3.759,3.759,0,0,0-1-.112h-.8v5.125ZM12.746,0h-2.16V-11.928h2.16Zm0-13.848h-2.16v-2.16h2.16Zm3.912,8.28v2.112q0,1.656,1.056,1.656,1.008,0,1.032-1.344v-.6l.024-.384h2.184v.552a6.891,6.891,0,0,1-.12,1.488,2.868,2.868,0,0,1-.432.96,2.858,2.858,0,0,1-1.128.96,3.378,3.378,0,0,1-1.488.336A3.4,3.4,0,0,1,16.31-.168a2.9,2.9,0,0,1-1.116-.888,3.058,3.058,0,0,1-.54-1.152,7.394,7.394,0,0,1-.156-1.68V-8.04a7.365,7.365,0,0,1,.156-1.692,3.288,3.288,0,0,1,.516-1.14,2.918,2.918,0,0,1,1.1-.888,3.326,3.326,0,0,1,1.464-.336,3.273,3.273,0,0,1,1.44.324,2.967,2.967,0,0,1,1.1.9,3.288,3.288,0,0,1,.516,1.14,7.365,7.365,0,0,1,.156,1.692v2.472Zm2.136-2.9a2.419,2.419,0,0,0-.252-1.26.882.882,0,0,0-.8-.4q-1.08,0-1.08,1.656v1.1h2.136Zm6.12-3.456v1.7a4.175,4.175,0,0,1,1.152-1.4,2.728,2.728,0,0,1,1.44-.468V-9.72a3.054,3.054,0,0,0-.4-.1,2.3,2.3,0,0,0-.348-.024q-1.848,0-1.848,2.616V0h-2.16V-11.928Zm6.024,0v1.7a4.175,4.175,0,0,1,1.152-1.4,2.728,2.728,0,0,1,1.44-.468V-9.72a3.054,3.054,0,0,0-.4-.1,2.3,2.3,0,0,0-.348-.024q-1.848,0-1.848,2.616V0h-2.16V-11.928Zm5.928,6.36v2.112q0,1.656,1.056,1.656,1.008,0,1.032-1.344v-.6l.024-.384h2.184v.552a6.891,6.891,0,0,1-.12,1.488,2.868,2.868,0,0,1-.432.96,2.858,2.858,0,0,1-1.128.96,3.378,3.378,0,0,1-1.488.336,3.4,3.4,0,0,1-1.476-.336A2.9,2.9,0,0,1,35.4-1.056a3.058,3.058,0,0,1-.54-1.152,7.394,7.394,0,0,1-.156-1.68V-8.04a7.365,7.365,0,0,1,.156-1.692,3.288,3.288,0,0,1,.516-1.14,2.918,2.918,0,0,1,1.1-.888,3.326,3.326,0,0,1,1.464-.336,3.273,3.273,0,0,1,1.44.324,2.967,2.967,0,0,1,1.1.9,3.288,3.288,0,0,1,.516,1.14,7.365,7.365,0,0,1,.156,1.692v2.472ZM39-8.472a2.419,2.419,0,0,0-.252-1.26.882.882,0,0,0-.8-.4q-1.08,0-1.08,1.656v1.1H39ZM50.9,0H49.676L49.2-1.325A3.443,3.443,0,0,1,48.089-.1a2.923,2.923,0,0,1-1.513.35,3.409,3.409,0,0,1-1.612-.375,2.936,2.936,0,0,1-1.138-1.05,4.914,4.914,0,0,1-.587-1.65,15.137,15.137,0,0,1-.163-2.5V-11.15q0-.975.038-1.65a7.243,7.243,0,0,1,.15-1.175,3.476,3.476,0,0,1,.313-.875,4.888,4.888,0,0,1,.5-.75,3.182,3.182,0,0,1,1.275-.987A4.087,4.087,0,0,1,47-16.925a3.851,3.851,0,0,1,2.438.787,3.613,3.613,0,0,1,1.313,2.163,3.514,3.514,0,0,1,.075.387q.025.188.05.475t.025.725v1.162H48.376q0-.75-.012-1.25t-.038-.775a1.594,1.594,0,0,0-.437-.963,1.237,1.237,0,0,0-.912-.363,1.276,1.276,0,0,0-1.3,1.15,5.844,5.844,0,0,0-.075.863q-.025.638-.025,1.587V-5.7q0,1,.05,1.725a3.8,3.8,0,0,0,.15.975,1.194,1.194,0,0,0,.463.662A1.293,1.293,0,0,0,47-2.1a1.169,1.169,0,0,0,.825-.3,1.59,1.59,0,0,0,.45-.825,4.416,4.416,0,0,0,.1-.888Q48.4-4.725,48.4-5.7v-.675H46.876V-8.45H50.9Zm8.324-3.888A7.365,7.365,0,0,1,59.069-2.2a3.288,3.288,0,0,1-.516,1.14,2.962,2.962,0,0,1-1.08.888,3.176,3.176,0,0,1-1.44.336,3.176,3.176,0,0,1-1.44-.336,2.962,2.962,0,0,1-1.08-.888A3.288,3.288,0,0,1,53-2.2a7.365,7.365,0,0,1-.156-1.692V-8.04A7.365,7.365,0,0,1,53-9.732a3.288,3.288,0,0,1,.516-1.14,2.962,2.962,0,0,1,1.08-.888,3.176,3.176,0,0,1,1.44-.336,3.176,3.176,0,0,1,1.44.336,2.962,2.962,0,0,1,1.08.888,3.288,3.288,0,0,1,.516,1.14,7.365,7.365,0,0,1,.156,1.692ZM55-3.456a2.52,2.52,0,0,0,.24,1.26.854.854,0,0,0,.792.4.854.854,0,0,0,.792-.4,2.52,2.52,0,0,0,.24-1.26V-8.472a2.52,2.52,0,0,0-.24-1.26.854.854,0,0,0-.792-.4.854.854,0,0,0-.792.4A2.52,2.52,0,0,0,55-8.472ZM67.217,0h-2.16V-1.3q-.384.408-.7.7a3.5,3.5,0,0,1-.6.456,2.206,2.206,0,0,1-.576.24,2.465,2.465,0,0,1-.6.072,1.4,1.4,0,0,1-1.2-.552,1.815,1.815,0,0,1-.312-.768A10.415,10.415,0,0,1,61-2.64v-9.288h2.16v8.784q0,.528.012.7a.962.962,0,0,0,.06.288.414.414,0,0,0,.456.36q.648,0,1.368-1.008v-9.12h2.16Zm8.112-16.008V0h-2.16V-1.152a4.608,4.608,0,0,1-1.1,1.02,2.163,2.163,0,0,1-1.128.3,1.623,1.623,0,0,1-1.56-.96,3,3,0,0,1-.192-.48,4.109,4.109,0,0,1-.12-.552A6.008,6.008,0,0,1,69-2.556q-.012-.42-.012-1.02V-8.352q0-.6.012-1.02a6.008,6.008,0,0,1,.06-.732,4.109,4.109,0,0,1,.12-.552,3,3,0,0,1,.192-.48,1.623,1.623,0,0,1,1.56-.96,2.163,2.163,0,0,1,1.128.3,4.608,4.608,0,0,1,1.1,1.02v-5.232ZM73.169-9.6a1.6,1.6,0,0,0-1.08-.528.755.755,0,0,0-.768.432,1,1,0,0,0-.144.444q-.024.252-.024.876v4.824q0,.624.024.864a1.17,1.17,0,0,0,.144.456.755.755,0,0,0,.768.432,1.6,1.6,0,0,0,1.08-.528Zm6.1,4.032v2.112q0,1.656,1.056,1.656,1.008,0,1.032-1.344v-.6l.024-.384h2.184v.552a6.891,6.891,0,0,1-.12,1.488,2.868,2.868,0,0,1-.432.96,2.859,2.859,0,0,1-1.128.96,3.378,3.378,0,0,1-1.488.336,3.4,3.4,0,0,1-1.476-.336A2.9,2.9,0,0,1,77.8-1.056a3.058,3.058,0,0,1-.54-1.152,7.394,7.394,0,0,1-.156-1.68V-8.04a7.365,7.365,0,0,1,.156-1.692,3.288,3.288,0,0,1,.516-1.14,2.918,2.918,0,0,1,1.1-.888,3.326,3.326,0,0,1,1.464-.336,3.273,3.273,0,0,1,1.44.324,2.967,2.967,0,0,1,1.1.9,3.288,3.288,0,0,1,.516,1.14,7.365,7.365,0,0,1,.156,1.692v2.472Zm2.136-2.9a2.419,2.419,0,0,0-.252-1.26.882.882,0,0,0-.8-.4q-1.08,0-1.08,1.656v1.1H81.4ZM90.209-9.96h-1.8v5.928a8.465,8.465,0,0,0,.048,1.008,1.75,1.75,0,0,0,.18.624.673.673,0,0,0,.36.324,1.644,1.644,0,0,0,.564.084,2.754,2.754,0,0,0,.648-.1v2.04a8,8,0,0,1-.828.168,5.176,5.176,0,0,1-.708.048,2.162,2.162,0,0,1-1.9-.888,2.091,2.091,0,0,1-.264-.432,2.6,2.6,0,0,1-.156-.48,4.109,4.109,0,0,1-.084-.636q-.024-.372-.024-.924V-9.96h-1.32v-1.968h1.32v-3.264h2.16v3.264h1.8Z"
+                          transform="translate(218 -540)"/>
+                    <g id="Groupe_18" data-name="Groupe 18" transform="translate(128 15)">
+                        <path id="youtube_activity_FILL0_wght400_GRAD0_opsz48"
+                              d="M89.24-780.072q.945.036,1.8.054t1.522.018H94q2.485,0,4.655-.071,1.855-.072,3.658-.2a15.381,15.381,0,0,0,2.607-.339,3.447,3.447,0,0,0,1.575-.929,3.553,3.553,0,0,0,.91-1.607,14.1,14.1,0,0,0,.332-2q.123-1.179.193-2.25.07-1.286.07-2.607t-.07-2.607q-.07-1.071-.193-2.25a14.1,14.1,0,0,0-.332-2,3.551,3.551,0,0,0-.91-1.607,3.449,3.449,0,0,0-1.575-.929,15.4,15.4,0,0,0-2.607-.339q-1.8-.125-3.658-.2Q96.485-800,94-800t-4.655.071q-1.855.072-3.658.2a15.406,15.406,0,0,0-2.607.339,3.449,3.449,0,0,0-1.575.929,3.551,3.551,0,0,0-.91,1.607,14.106,14.106,0,0,0-.332,2q-.123,1.179-.192,2.25Q80-791.322,80-790C80.443-789.583,89.427-780.5,89.24-780.072Z"
+                              transform="translate(-22 227)" fill="#f83939"/>
+                        <path id="youtube_activity_FILL0_wght400_GRAD0_opsz48-2"
+                              data-name="youtube_activity_FILL0_wght400_GRAD0_opsz48"
+                              d="M98.76-780.072q-.945.036-1.8.054T95.435-780H94q-2.485,0-4.655-.071-1.855-.072-3.658-.2a15.4,15.4,0,0,1-2.607-.339,3.448,3.448,0,0,1-1.575-.929,3.552,3.552,0,0,1-.91-1.607,14.105,14.105,0,0,1-.332-2q-.123-1.179-.192-2.25Q80-788.679,80-790t.07-2.607q.07-1.071.192-2.25a14.106,14.106,0,0,1,.332-2,3.551,3.551,0,0,1,.91-1.607,3.449,3.449,0,0,1,1.575-.929,15.393,15.393,0,0,1,2.607-.339q1.8-.125,3.658-.2Q91.515-800,94-800t4.655.071q1.855.072,3.658.2a15.406,15.406,0,0,1,2.607.339,3.449,3.449,0,0,1,1.575.929,3.55,3.55,0,0,1,.91,1.607,14.1,14.1,0,0,1,.332,2q.123,1.179.193,2.25.07,1.286.07,2.607v.607C107.557-789.583,98.573-780.5,98.76-780.072Zm-7.56-5.643L98.48-790l-7.28-4.286Z"
+                              transform="translate(-22 227)" fill="#f83939"/>
+                        <path id="Polygone_2" data-name="Polygone 2" d="M4,0,8,7H0Z"
+                              transform="translate(75.973 -567) rotate(90)" fill="#fff"/>
+                    </g>
+                </g>
+                <text id="FR" transform="translate(312 -555)" font-size="10" font-family="Roboto-Light, Roboto"
+                      font-weight="300" opacity="0.6">
+                    <tspan x="0" y="0">FR</tspan>
+                </text>
+            </g>
+        </svg>
+    </nav>
+    <!--Header-action-->
+    <div class="container-main-header-action d-flex align-items-center">
+        <div class="tooltip">
+            <div class="action jello-horizontal darkable dark-mode" onclick="toggleFullscreen()">
+                <span class="material-icons">fullscreen</span>
+            </div>
+            <span class="tooltiptext darkable dark-mode">Immersif</span>
+        </div>
+        <div class="tooltip">
+            <div class="action jello-horizontal darkable dark-mode" onclick="toggleMode()">
+                <span class="material-icons">nightlight_round</span>
+            </div>
+            <span class="tooltiptext darkable dark-mode">Mode</span>
+        </div>
+    </div>
+</header>
+
+<!--Main section-->
+<section class="container-main" id="content">
+    <div class="row no-gutters">
+        <!--Section-left-->
+        <div class="col-12 col-lg-8">
+
+            <!--Lofi-->
+            <div class="container-main-left box" id="div1">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video id="myVideo" src="video/lofi.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>Ux Ui Designer - Intégrateur web - beats to relax/work to</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar" style=" background-image: url('image/lofi-pierre.png');"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    Pierre Goudet
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">28 ans</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode" onclick="myFunctionCollapse()">
+                    <p> UI-UX Designer - Intégrateur au BivwAk! Hub de transformation et
+                        d’innovation de BNP Paribas
+                        Depuis le 15 juil.2020</p>
+                    <p>
+                        Hello, moi c'est Pierre.
+                    </p>
+                    <p id="collapse" class="content-collapse"> Passionné par le web et le graphisme, je suis
+                        perfectionniste
+                        en ce qui concerne la qualité de mes réalisations. Curieux et toujours en quête de nouvelles
+                        connaissances, j'ai créé de nombreux services et interfaces numériques (web et mobiles) pour
+                        des
+                        entreprises proposant des services digitaux. N'hésitez pas à jeter un œil à mes projets et
+                        si
+                        vous avez un projet génial en tête, ne soyez pas timide, contactez-moi ! Je suis prêt à
+                        relever
+                        de nouveaux défis. À très bientôt !</p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                        <span>5 Expériences</span>
+                        <div class="tooltip" onclick="myFunctionCollapse2()">
+                            <div class="action jello-horizontal">
+                                <span class="material-icons">expand_circle_down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-job-body collapse2 content-collapse2">
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <p>BNP Paribas - UI-UX Designer - Intégrateur</p>
+                                    <span>Depuis juillet 2020 - CDI - Paris</span>
+                                </div>
+                                <p>
+                                    BivwAk! Hub de transformation et d'innovation de BNP Paribas. <br> <br>
+
+                                    Projets principaux de BNP Paribas : <br>
+                                    My Arval, BOOST, Learner Compass, Skill compass, Guidebook. <br><br>
+
+                                    Responsabilités principales:<br>
+                                    - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                    - Conception des designs systèmes (UI).<br>
+                                    - Optimisation de l'expérience utilisateur en effectuant des tests
+                                    d'utilisabilité et en analysant les données comportementales des utilisateurs
+                                    (UX).<br>
+                                    - Conception des wireframes, des maquettes et des prototypes interactifs
+                                    (UX).<br>
+                                    - Gérance des règles de gestion en collaboration avec les équipes de
+                                    développement et les clients.<br>
+                                    - Création d’un CMS (système de gestion de contenu) et un backoffice.<br>
+                                    - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                    compatibilité responsive avec les différents navigateurs.<br>
+                                    - Collaboration en équipe avec les développeurs back-end pour intégrer les
+                                    fonctionnalités dynamiques.<br>
+                                    - Création des modules complémentaires : quiz, systèmes de mailing, articles,
+                                    galeries photo, systèmes d'édition, etc.<br>
+                                    - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                    - Création de charte graphique.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/ikimo9-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div>
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <p>Ikimo9 - Webdesigner - Intégrateur</p>
+                                        <span>Octobre 2017 - Juillet 2019 - Alternance - Montpellier</span>
+                                    </div>
+                                    <p>
+                                        Projet : Site web Ikimo9.com<br><br>
+
+                                        Responsabilités principales :<br>
+                                        - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                        - Optimisation de l'expérience utilisateur (UX).<br>
+                                        - Conception des wireframes, des maquettes et des prototypes interactifs
+                                        (UX).<br>
+                                        - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                        compatibilité responsive avec les différents navigateurs.<br>
+                                        - Collaboration en équipe avec les développeurs back-end.<br>
+                                        - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                        - Garant de la charte graphique et des règles de gestion au sein d’une équipe de
+                                        développeurs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex sep">
+                            <div class="avatar" style=" background-image: url('image/panjee-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div>
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <p>Panjee - Webdesigner - Intégrateur</p>
+                                        <span>Avril 2017 - Juillet 2017 - Se - Montpellier</span>
+                                    </div>
+                                    <p>Projet : Site vitrine Panjee<br><br>
+
+                                        Responsabilités principales :<br>
+                                        - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                        - Optimisation de l'expérience utilisateur (UX).<br>
+                                        - Conception des wireframes, des maquettes et des prototypes interactifs
+                                        (UX).<br>
+                                        - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                        compatibilité responsive avec les différents navigateurs.<br>
+                                        - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                        - Garant de la charte graphique et des règles de gestion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex sep">
+                            <div class="avatar" style=" background-image: url('image/id-alizes-logo.png');"></div>
+                            <div class="info-job">
+                                <div>
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <p>ID ALIZES - Webdesigner - Intégrateur</p>
+                                        <span>Juin 2016 - Août 2016 - Se - Nîmes</span>
+                                    </div>
+                                    <p>Projet : Site web Urbanis<br><br>
+
+                                        Responsabilités principales :<br>
+                                        - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                        - Optimisation de l'expérience utilisateur (UX).<br>
+                                        - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                        compatibilité responsive avec les différents navigateurs.<br>
+                                        - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                        - Création de la charte graphique et des règles de gestion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex sep">
+                            <div class="avatar" style=" background-image: url('image/hupmedia-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div>
+                                    <div class="d-flex align-items-center flex-wrap">
+                                        <p>BACH'UP SERVICES - Infographiste</p>
+                                        <span>Juin 2015 - Août 2015 - Se - Nîmes</span>
+                                    </div>
+                                    <p>Projet : Création et adaptation de supports visuels destinée au système de bâche
+                                        bach'up.<br><br>
+
+                                        - Création des visuels graphiques.<br>
+                                        - Création de la charte graphique<br>
+                                        - Garant des chartes graphique et adaptation de supports visuels.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Arval-->
+            <div class="container-main-left box hidden" id="div2">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video id="myVideo" src="video/arval.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>My Arval by BNP Paribas</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    BNP Paribas
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">2mois</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>My Arval by BNP Paribas</p>
+                    <p>My Arval de BNP Paribas est une application de gestion de flotte automobile. Elle offre des
+                        fonctionnalités telles que la consultation des contrats, le suivi des
+                        informations sur les véhicules, la génération de rapports, la réservation d'entretien et la
+                        gestion des amendes. </p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                        <span>1 Expérience</span>
+                        <div class="tooltip" onclick="myFunctionCollapse2()">
+                            <div class="action jello-horizontal">
+                                <span class="material-icons">expand_circle_down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-job-body collapse2 content-collapse2">
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <p>BNP Paribas - UI-UX Designer - Intégrateur</p>
+                                    <span>Depuis juillet 2020 - CDI - Paris</span>
+                                </div>
+                                Responsabilités principales:<br>
+                                - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                - Conception des designs systèmes (UI).<br>
+                                - Optimisation de l'expérience utilisateur en effectuant des tests
+                                d'utilisabilité et en analysant les données comportementales des utilisateurs
+                                (UX).<br>
+                                - Conception des wireframes, des maquettes et des prototypes interactifs
+                                (UX).<br>
+                                - Gérance des règles de gestion en collaboration avec les équipes de
+                                développement et les clients.<br>
+                                - Création d’un CMS (système de gestion de contenu) et un backoffice.<br>
+                                - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                compatibilité responsive avec les différents navigateurs.<br>
+                                - Collaboration en équipe avec les développeurs back-end pour intégrer les
+                                fonctionnalités dynamiques.<br>
+                                - Création des modules complémentaires : quiz, systèmes de mailing, articles,
+                                galeries photo, systèmes d'édition, etc.<br>
+                                - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                - Création de charte graphique.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Boost-->
+            <div class="container-main-left box hidden" id="div3">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video src="video/boost.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>BOOST by BNP Paribas</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    BNP Paribas
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">2ans</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>BOOST by BNP Paribas</p>
+                    <p>BOOST est une webapp de création et gestion de site pour les organisateurs d'événements au sein
+                        de BNP Paribas. Elle permet de créer des pages dédiées aux couleurs de l'évenement pour partager
+                        du contenu et récupérer des informations. De la conception et l'envoi des invitations, à
+                        l'animation des événements sur place le jour J jusqu'à la récupération du feedbacks des
+                        participants, BOOST est une webapp complète pour un événement hybride.</p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                        <span>1 Expérience</span>
+                        <div class="tooltip" onclick="myFunctionCollapse2()">
+                            <div class="action jello-horizontal">
+                                <span class="material-icons">expand_circle_down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-job-body collapse2 content-collapse2">
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <p>BNP Paribas - UI-UX Designer - Intégrateur</p>
+                                    <span>Depuis juillet 2020 - CDI - Paris</span>
+                                </div>
+                                Responsabilités principales:<br>
+                                - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                - Conception des designs systèmes (UI).<br>
+                                - Optimisation de l'expérience utilisateur en effectuant des tests
+                                d'utilisabilité et en analysant les données comportementales des utilisateurs
+                                (UX).<br>
+                                - Conception des wireframes, des maquettes et des prototypes interactifs
+                                (UX).<br>
+                                - Gérance des règles de gestion en collaboration avec les équipes de
+                                développement et les clients.<br>
+                                - Création d’un CMS (système de gestion de contenu) et un backoffice.<br>
+                                - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                compatibilité responsive avec les différents navigateurs.<br>
+                                - Collaboration en équipe avec les développeurs back-end pour intégrer les
+                                fonctionnalités dynamiques.<br>
+                                - Création des modules complémentaires : quiz, systèmes de mailing, articles,
+                                galeries photo, systèmes d'édition, etc.<br>
+                                - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                - Création de charte graphique.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Learner compass-->
+            <div class="container-main-left box hidden" id="div4">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video src="video/lc.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>Learner compass by BNP Paribas</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    BNP Paribas
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">1 ans</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>Learner compass by BNP Paribas</p>
+                    <p>Learner Compass, proposé par BNP Paribas, est un site web de formation interne qui permet aux
+                        collaborateurs d'accéder à une variété de cours pour développer leurs compétences
+                        professionnelles.Learner Compass facilite l'apprentissage et le développement au sein de
+                        l'entreprise</p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                        <span>1 Expérience</span>
+                        <div class="tooltip" onclick="myFunctionCollapse2()">
+                            <div class="action jello-horizontal">
+                                <span class="material-icons">expand_circle_down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-job-body collapse2 content-collapse2">
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <p>BNP Paribas - UI-UX Designer - Intégrateur</p>
+                                    <span>Depuis juillet 2020 - CDI - Paris</span>
+                                </div>
+                                Responsabilités principales:<br>
+                                - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                - Conception des designs systèmes (UI).<br>
+                                - Optimisation de l'expérience utilisateur en effectuant des tests
+                                d'utilisabilité et en analysant les données comportementales des utilisateurs
+                                (UX).<br>
+                                - Conception des wireframes, des maquettes et des prototypes interactifs
+                                (UX).<br>
+                                - Gérance des règles de gestion en collaboration avec les équipes de
+                                développement et les clients.<br>
+                                - Création d’un CMS (système de gestion de contenu) et un backoffice.<br>
+                                - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                compatibilité responsive avec les différents navigateurs.<br>
+                                - Collaboration en équipe avec les développeurs back-end pour intégrer les
+                                fonctionnalités dynamiques.<br>
+                                - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                - Création de charte graphique.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--WM-->
+            <div class="container-main-left box hidden" id="div5">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video src="video/wm.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>Skill compass by BNP Paribas</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    BNP Paribas
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">1 ans</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>Skill compass by BNP Paribas</p>
+                    <p> Skill Compass est la plateforme de formation en ligne de BNP Paribas Wealth Management dédiée au
+                        développement des compétences.Skill Compass est une adaptation spécifique de LearnerCompass, la
+                        plateforme de formation en ligne de BNP Paribas, créée spécialement pour répondre aux besoins et
+                        aux exigences du secteur chez BNP Paribas Wealth Management.</p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                        <span>1 Expérience</span>
+                        <div class="tooltip" onclick="myFunctionCollapse2()">
+                            <div class="action jello-horizontal">
+                                <span class="material-icons">expand_circle_down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-job-body collapse2 content-collapse2">
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <p>BNP Paribas - UI-UX Designer - Intégrateur</p>
+                                    <span>Depuis juillet 2020 - CDI - Paris</span>
+                                </div>
+                                Responsabilités principales:<br>
+                                - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                - Conception des designs systèmes (UI).<br>
+                                - Optimisation de l'expérience utilisateur en effectuant des tests
+                                d'utilisabilité et en analysant les données comportementales des utilisateurs
+                                (UX).<br>
+                                - Conception des wireframes, des maquettes et des prototypes interactifs
+                                (UX).<br>
+                                - Gérance des règles de gestion en collaboration avec les équipes de
+                                développement et les clients.<br>
+                                - Création d’un CMS (système de gestion de contenu) et un backoffice.<br>
+                                - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                compatibilité responsive avec les différents navigateurs.<br>
+                                - Collaboration en équipe avec les développeurs back-end pour intégrer les
+                                fonctionnalités dynamiques.<br>
+                                - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                - Création de charte graphique.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Guidebook-->
+            <div class="container-main-left box hidden" id="div6">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video src="video/guidebook.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>GuideBook by BNP Paribas</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    BNP Paribas
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">1 mois</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>GuideBook by BNP Paribas</p>
+                    <p> Guide Book est un site d'accueil conçu pour les nouveaux arrivants au Bivwak. Il vise à fournir
+                        des informations pratiques et essentielles pour faciliter leur intégration. Guide Book offre un
+                        accès facile aux renseignements sur l'environnement, les procédures administratives et les
+                        services disponibles.</p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                        <span>1 Expérience</span>
+                        <div class="tooltip" onclick="myFunctionCollapse2()">
+                            <div class="action jello-horizontal">
+                                <span class="material-icons">expand_circle_down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-job-body collapse2 content-collapse2">
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/bnp-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <p>BNP Paribas - UI-UX Designer - Intégrateur</p>
+                                    <span>Depuis juillet 2020 - CDI - Paris</span>
+                                </div>
+                                Responsabilités principales:<br>
+                                - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                - Conception des designs systèmes (UI).<br>
+                                - Optimisation de l'expérience utilisateur en effectuant des tests
+                                d'utilisabilité et en analysant les données comportementales des utilisateurs
+                                (UX).<br>
+                                - Conception des wireframes, des maquettes et des prototypes interactifs
+                                (UX).<br>
+                                - Gérance des règles de gestion en collaboration avec les équipes de
+                                développement et les clients.<br>
+                                - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                compatibilité responsive avec les différents navigateurs.<br>
+                                - Collaboration en équipe avec les développeurs back-end pour intégrer les
+                                fonctionnalités dynamiques.<br>
+                                - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                - Création de charte graphique.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Ikimo9-->
+            <div class="container-main-left box hidden" id="div7">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video src="video/ikimo9.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>Ikimo9</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar"
+                                 style="background-image: url('image/ikimo9-logo.jpg') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    Ikimo9
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">2 ans</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>Ikimo9</p>
+                    <p>
+                        Ikimo9 est un comparateur immobilier en ligne qui simplifie la recherche de biens immobiliers en
+                        permettant aux utilisateurs de comparer facilement les offres disponibles.</p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                        <span>1 Expérience</span>
+                        <div class="tooltip" onclick="myFunctionCollapse2()">
+                            <div class="action jello-horizontal">
+                                <span class="material-icons">expand_circle_down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-job-body collapse2 content-collapse2">
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/ikimo9-logo.jpg');"></div>
+                            <div class="info-job">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <p>Ikimo9 - Webdesigner - Intégrateur</p>
+                                    <span>Octobre 2017 - Juillet 2019 - Alternance - Montpellier</span>
+                                </div>
+                                Responsabilités principales :<br>
+                                - Conception des maquettes et des interfaces utilisateurs (UI).<br>
+                                - Optimisation de l'expérience utilisateur (UX).<br>
+                                - Conception des wireframes, des maquettes et des prototypes interactifs
+                                (UX).<br>
+                                - Intégration des maquettes en HTML, CSS et JavaScript, en assurant la
+                                compatibilité responsive avec les différents navigateurs.<br>
+                                - Collaboration en équipe avec les développeurs back-end.<br>
+                                - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                                - Garant de la charte graphique et des règles de gestion au sein d’une équipe de
+                                développeurs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Lemonlab-->
+            <div class="container-main-left box hidden" id="div8">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video src="video/lemonlab.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>Lemon lab • Logotype • Studio de jeu vidéo</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar"
+                                 style="background-image: url('image/lemon-logo.png') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    Lemon lab
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">1 semaine</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>Lemon lab</p>
+                    <p>Lemon Lab est un studio de jeux vidéo indépendant. Parmi mes réalisations de logos, j'ai eu
+                        l'opportunité de créer le logo principal pour Lemon Lab.</p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                        <span>1 Expérience</span>
+                        <div class="tooltip" onclick="myFunctionCollapse2()">
+                            <div class="action jello-horizontal">
+                                <span class="material-icons">expand_circle_down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-job-body collapse2 content-collapse2">
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/lemon-logo.png');"></div>
+                            <div class="info-job">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <p>Lemon lab - Graphsite</p>
+                                </div>
+                                Responsabilités principales :<br>
+                                - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Diane-->
+            <div class="container-main-left box hidden" id="div9">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video src="video/diane.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>Temple de diane • Logotype • Marque de Vêtement</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar"
+                                 style="background-image: url('image/diane-logo.png') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    Lemon lab
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">1 semaine</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>Temple de diane</p>
+                    <p>Temple de Diane est une marque de vêtements sur Nîmes. Parmi
+                        mes réalisations de logos, j'ai eu l'opportunité de créer le logo principal pour Temple de
+                        Diane.</p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                        <span>1 Expériences</span>
+                        <div class="tooltip" onclick="myFunctionCollapse2()">
+                            <div class="action jello-horizontal">
+                                <span class="material-icons">expand_circle_down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-job-body collapse2 content-collapse2">
+                        <div class="d-flex sep">
+                            <div class="avatar" style="background-image: url('image/diane-logo.png');"></div>
+                            <div class="info-job">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <p>Temple de diane - Graphiste</p>
+                                </div>
+                                Responsabilités principales :<br>
+                                - Création des visuels graphiques : logos, icônes, illustrations, etc.<br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Jamy-->
+            <div class="container-main-left box hidden" id="div10">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video src="video/jamy.mp4" controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>Jamy gourmaud • Illustration • Fan art</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar"
+                                 style="background-image: url('image/lofi-pierre.png') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    Pierre Goudet
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">28 ans</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>Jamy gourmaud • Illustration • Fan art</p>
+                    <p>Parmi mes réalisations personnelles, j'ai eu l'occasion de créer des illustration fan art. Cette
+                        illustration a été réalisée dans le but de perfectionner ma maîtrise des logiciels de la suite
+                        Adobe et d'explorer ma créativité artistique. </p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                    </div>
+                </div>
+            </div>
+
+            <!--Varok-->
+            <div class="container-main-left box hidden" id="div11">
+                <!-- Img Lofi-->
+                <div class="container-img">
+                    <video src="video/Varok%20Saurfang-World%20Of%20Warcraft-Animated%20Wallpaper.mp4"
+                           controls loop
+                           style="width: 100%;height: 100%;" onclick="reduceVolume()">
+                        Votre navigateur ne prend pas en charge la balise vidéo.
+                    </video>
+                </div>
+                <!-- Presentation text-->
+                <div class="container-desc-text">
+                    <h1>Login screen • Varok saurcroc • Wallpaper engine</h1>
+                    <!--Infos-->
+                    <div class="container-info d-flex align-items-center">
+                        <!--Avatar-->
+                        <div class="container-avatar d-flex align-items-center">
+                            <div class="avatar"
+                                 style="background-image: url('image/lofi-pierre.png') !important;"></div>
+                            <div class="container-desc-avatar">
+                                <p class="d-flex align-items-center name">
+                                    Pierre Goudet
+                                    <span class="material-icons">check_circle</span>
+                                </p>
+                                <span class="age">28 ans</span>
+                            </div>
+                        </div>
+                        <!--Contact-->
+                        <div class="container-contact d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="mail darkable dark-mode"
+                                   href="mailto:goudetpierre06@gmail.com?subject=HTML link">Me
+                                    contacter</a>
+                            </div>
+                            <div class="tooltip">
+                                <a class="phone darkable dark-mode" href="tel:+33625607003">Me
+                                    téléphoner</a>
+                            </div>
+                        </div>
+                        <!--Link-->
+                        <div class="container-link d-flex align-items-center">
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank" href="Cv.pdf">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" height="48"
+                                         viewBox="0 96 960 960" width="48">
+                                        <path d="M349 806h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 746H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 806Zm0-170h262q12.75 0 21.375-8.675 8.625-8.676 8.625-21.5 0-12.825-8.625-21.325T611 576H349q-12.75 0-21.375 8.675-8.625 8.676-8.625 21.5 0 12.825 8.625 21.325T349 636ZM220 976q-24 0-42-18t-18-42V236q0-24 18-42t42-18h336q12.444 0 23.722 5T599 194l183 183q8 8 13 19.278 5 11.278 5 23.722v496q0 24-18 42t-42 18H220Zm331-584V236H220v680h520V422H581q-12.75 0-21.375-8.625T551 392ZM220 236v186-186 680-680Z"/>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Télécharger mon cv</span>
+                            </div>
+                            <div class="tooltip">
+                                <a class="link darkable dark-mode jello-horizontal" target="_blank"
+                                   href="https://www.linkedin.com/in/pierre-goudet-6a422b137/">
+                                    <svg class="darkable dark-mode" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 30 30">
+                                        <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
+                                    </svg>
+                                </a>
+                                <span class="tooltiptext darkable dark-mode">Voir mon linkedin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Biography Text -->
+                <div class="container-bio-text darkable dark-mode">
+                    <p>Login screen • Varok saurcroc • Wallpaper engine - For the Horde</p>
+                    <p>
+                        Parmi mes réalisations personnelles, j'ai eu l'occasion de créer des Login screens et des fonds
+                        d'écran animés avec l'utilisation de Wallpaper Engine. Ces créations ont été réalisées dans le
+                        but de perfectionner ma maîtrise des logiciels de la suite Adobe, notamment pour le montage
+                        vidéo et l'animation, tout en explorant ma créativité artistique. À travers ces réalisations,
+                        j'ai pu expérimenter différentes techniques, améliorer mes compétences techniques et exprimer ma
+                        passion pour la conception visuelle et l'animation. Ces projets m'ont également permis d'élargir
+                        mes connaissances en matière de création d'expériences visuelles interactives.</p>
+                </div>
+                <!-- Formation -->
+                <div class="container-job">
+                    <div class="container-job-header d-flex align-items-center justify-content-between">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--Section-right-->
+        <div class="col-12 col-lg-4">
+            <div class="container-main-right">
+                <!--Compétences-->
+                <div class="container-skills darkable dark-mode d-flex align-items-center">
+                     <span class="myTagBtn darkable dark-mode active" onclick="toggleElements('category1')"
+                           id="category1Btn">Mes compétences</span>
+                    <span class="myTagBtn darkable dark-mode" onclick="toggleElements('category2')" id="category2Btn">Adobe Xd</span>
+                    <span class="myTagBtn darkable dark-mode" onclick="toggleElements('category3')" id="category3Btn">Adobe Illustrator</span>
+                    <span class="myTagBtn darkable dark-mode" onclick="toggleElements('category4')" id="category4Btn">Adobe Photoshop</span>
+                    <span class="myTagBtn darkable dark-mode" onclick="toggleElements('category5')" id="category5Btn">Adobe Premier pro</span>
+                    <span class="myTagBtn darkable dark-mode" onclick="toggleElements('category6')" id="category6Btn">Adobe After effect</span>
+                    <span class="myTagBtn darkable dark-mode" onclick="toggleElements('category7')" id="category7Btn">Figma</span>
+                    <span class="myTagBtn darkable dark-mode" onclick="toggleElements('category8')" id="category8Btn">Html css</span>
+                    <span class="myTagBtn darkable dark-mode" onclick="toggleElements('category9')" id="category9Btn">Angular</span>
+                </div>
+                <!--Réalisations-->
+                <div class="container-achievement item-list">
+                    <div onclick="toggleDivs(2)" id="btn2"
+                         class="myTag category1 category2 category3 category4 category6 category7 category8 category9 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/arvalmockup.png');">
+                        </div>
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>My Arval by BNP Paribas</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">BNP Paribas</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Application de gestion de flotte automobile • 2 mois</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="toggleDivs(3)" id="btn3"
+                         class="myTag category1 category2 category3 category4 category6 category7 category8 category9 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/boostmockup.png');">
+                        </div>
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>BOOST by BNP Paribas</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">BNP Paribas</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Application d'événementielle • 2 ans</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="toggleDivs(4)" id="btn4"
+                         class="myTag category1 category2 category3 category4 category6 category7 category8 category9 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/learnercompassmockup.png');">
+                        </div>
+
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>Learner compass by BNP Paribas</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">BNP Paribas</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Site web de formation • 1 ans</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="toggleDivs(5)" id="btn5"
+                         class="myTag category1 category2 category3 category4 category6 category7 category8 category9 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/discoverskillmockup.png');">
+                        </div>
+
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>Skill compass by BNP Paribas</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">BNP Paribas</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Site web de formation • 1 ans</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="toggleDivs(6)" id="btn6"
+                         class="myTag category1 category2 category3 category4 category6 category7 category8 category9 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/guidebookmockup.png');">
+                        </div>
+
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>GuideBook by BNP Paribas</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">BNP Paribas</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Guide d'accueil à BivwAk! • 1 mois</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="toggleDivs(7)" id="btn7"
+                         class="myTag category1 category2 category3 category4 category6 category7 category8 category9 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/ikimo9mockup.png');">
+                        </div>
+
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>Ikimo9.com</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">Ikimo9</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Comparateur immobilier • 2 ans</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="toggleDivs(8)" id="btn8"
+                         class="myTag category1 category3 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/lemonlabmockup.png');">
+                        </div>
+
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>Lemon Labo</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">LemonLabo</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Logotype • Studio de jeu vidéo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="toggleDivs(9)" id="btn9"
+                         class="myTag category1 category3 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/templededianemockup.png');">
+                        </div>
+
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>Temple de Diane</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">Temple de Diane</p>
+                                <span class="material-icons">check_circle</span>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Logotype • Marque de Vêtement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="toggleDivs(10)" id="btn10"
+                         class="myTag category1 category4 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/jamymockup.png');">
+                        </div>
+
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>Illustration - Jamy Gourmaud</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">Wallpaper</p>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Illustration • Fan art</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div onclick="toggleDivs(11)" id="btn11"
+                         class="myTag category1 category4 category5 category6 achievements darkable dark-mode d-flex">
+                        <!--Img réalisation-->
+
+                        <div class="container-img-achievements"
+                             style="background-image: url('image/varokmockup.png');">
+                        </div>
+
+                        <!--Réalisation text-->
+                        <div class="container-txt">
+                            <span>Login screen - Varok saurcroc</span>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <p class="name">Wallpaper engine</p>
+                            </div>
+                            <div class="container-txt-info d-flex align-items-center">
+                                <span class="name">Animated illustration • Fan art</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Formation-->
+                <div class="container-training">
+                    <div class="container-training-header">
+                        <span></span>
+                    </div>
+                    <div class="container-training-body d-flex">
+                        <!--Training-->
+                        <div onclick="window.open('https://www.digital-campus.fr/', '_blank');" class="training">
+                            <div class="container-training-image d-flex align-items-center justify-content-center bg-pan-bl"
+                                 style="background-image: url('image/dc-school1.png');">
+                                <!--<span>DC</span>-->
+                            </div>
+                            <div class="container-training-text">
+                                <p>Expert en stratégie digitale • M2</p>
+                                <span>Digital Campus - Certification RNCP Niveau 1 </span>
+                            </div>
+                        </div>
+                        <div onclick="window.open('https://www.digital-campus.fr/', '_blank');" class="training">
+                            <div class="container-training-image d-flex align-items-center justify-content-center"
+                                 style="background-image: url('image/dc-school2.png');">
+                                <!--<span>DC</span>-->
+                            </div>
+                            <div class="container-training-text">
+                                <p>Certification de projet web</p>
+                                <span>Digital Campus • Préparation Master Digitale</span>
+                            </div>
+                        </div>
+                        <div class="training">
+                            <div class="container-training-image d-flex align-items-center justify-content-center"
+                                 style="background-image: url('image/im-school1.png');">
+                                <!--<span>IMG</span>-->
+                            </div>
+                            <div class="container-training-text">
+                                <p>Certification <br> webdesigner</p>
+                                <span>Image • Certification RNCP niveau 3</span>
+                            </div>
+                        </div>
+                        <div class="training">
+                            <div class="container-training-image d-flex align-items-center justify-content-center"
+                                 style="background-image: url('image/im-school2.png');">
+                                <!--<span>IMG</span>-->
+                            </div>
+                            <div class="container-training-text">
+                                <p>Certification <br> infographie</p>
+                                <span>Image • Certification RNCP niveau 4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer></footer>
+
+</body>
+
+</html>
+
