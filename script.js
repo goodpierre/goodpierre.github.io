@@ -15,10 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function myFunctionCollapse() {
     var x = document.getElementById("collapse");
+    var paragraph = document.getElementById("collapseParagraph");
+
     if (x.style.maxHeight) {
+        // Si le contenu est déjà étendu, on le réduit
         x.style.maxHeight = null;
+        paragraph.innerHTML = "Plus"; // Remplacer le texte du paragraphe par "Read More"
     } else {
+        // Si le contenu est réduit, on l'étend pour afficher le texte complet
         x.style.maxHeight = x.scrollHeight + "px";
+        paragraph.innerHTML = "Moins"; // Remplacer le texte du paragraphe par "Read Less"
     }
 }
 
