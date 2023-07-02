@@ -86,7 +86,7 @@ body.dark-mode {
   background-color: rgba(0, 0, 0, 0.4); /* couleur de fond semi-transparente */
 
   .modal-content {
-    background-color: var(--primary-bg-color);
+    background-color: var(--primary-bg-color-light);
     overflow-y: scroll;
     width: 250px;
     height: 100%;
@@ -105,7 +105,7 @@ body.dark-mode {
       span.skill {
         min-width: 100%;
         margin-bottom: 0.5rem;
-        border: 1px solid var(--on-background);
+        border: 1px solid var(--on-background-light);
         padding: 0.5rem;
         border-radius: 3px;
         display: block;
@@ -150,6 +150,14 @@ body.dark-mode {
       color: var(--on-surface);
     }
 
+  }
+
+  .modal-content.dark-mode{
+    background-color: var(--primary-bg-color);
+
+    span.skill{
+      border: 1px solid var(--on-background);
+    }
   }
 }
 
