@@ -1,14 +1,13 @@
 /*Variables css*/
-
 :root {
 
   /*Color*/
   --primary-color: red;
   --secondary-color: #fff;
-  --tertiary-color: red;
+  --tertiary-color: #dadada;
   --primary-color-light: red;
   --secondary-color-light: #1e1e24;
-  --tertiary-color-light: red;
+  --tertiary-color-light: #494747;
 
   /*Color background*/
   --primary-bg-color: #1e1e24;
@@ -152,6 +151,20 @@ body.dark-mode {
 
   }
 
+  /* Works on Chrome, Edge, and Safari */
+  .modal-content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .modal-content::-webkit-scrollbar-track {
+    background: var(--primary-surface-color-light);
+  }
+
+  .modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color-light);
+    border-radius: 20px;
+  }
+
   .modal-content.dark-mode{
     background-color: var(--primary-bg-color);
 
@@ -159,6 +172,20 @@ body.dark-mode {
       border: 1px solid var(--on-background);
     }
   }
+
+  .modal-content.dark-mode::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .modal-content.dark-mode::-webkit-scrollbar-track {
+    background: var(--primary-surface-color);
+  }
+
+  .modal-content.dark-mode::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+  }
+
 }
 
 .slide-in-left {
@@ -299,8 +326,8 @@ header {
         /*Mail*/
 
         .mail {
-          color: var(--on-surface-light);
-          background: var(--primary-surface-color-light);
+          color: var(--on-secondary-light);
+          background: var(--secondary-color-light);
           display: block;
           padding: 0.5rem 1.5rem;
           border-radius: 18px;
@@ -311,18 +338,19 @@ header {
         }
 
         .mail:hover {
-          background: var(--secondary-surface-color-light);
+          background: var(--tertiary-color-light);
+
         }
 
         /*Darkmode*/
 
         .mail.dark-mode {
-          color: var(--on-surface);
-          background: var(--primary-surface-color);
+          color: var(--on-secondary);
+          background: var(--secondary-color);
         }
 
         .mail.dark-mode:hover {
-          background: var(--secondary-surface-color);
+          background: var(--tertiary-color);
         }
 
         /*Phone*/

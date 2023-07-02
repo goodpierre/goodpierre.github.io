@@ -214,19 +214,31 @@ document.addEventListener('DOMContentLoaded', function() {
     var secondElement = document.getElementById('secondElement');
 
     showButton.addEventListener('click', function() {
-        // Ajoute la classe CSS 'show' pour afficher l'élément
+        // Ajoute la classe CSS 'highlight' pour afficher l'élément
         element.classList.add('highlight');
         secondElement.classList.add('slide-in-left');
         document.body.classList.add('no-scroll');
     });
 
+    element.addEventListener('click', function() {
+        // Supprime la classe CSS 'highlight' pour masquer l'élément
+        element.classList.remove('highlight');
+        secondElement.classList.remove('slide-in-left');
+        document.body.classList.remove('no-scroll');
+    });
+
     hideButton.addEventListener('click', function() {
-        // Supprime la classe CSS 'show' pour masquer l'élément
+        // Supprime la classe CSS 'highlight' pour masquer l'élément
         element.classList.remove('highlight');
         secondElement.classList.remove('slide-in-left');
         document.body.classList.remove('no-scroll');
     });
 });
+
+
+
+
+
 
 
 
