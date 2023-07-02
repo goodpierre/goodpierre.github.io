@@ -151,10 +151,82 @@ function stopVideos(container) {
     });
 }
 
+function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
+    const maDiv = document.getElementById(divId);
+    const flecheGauche = document.getElementById(leftArrowId);
+    const flecheDroite = document.getElementById(rightArrowId);
 
+    // Fonction pour vérifier la visibilité des flèches
+    function checkArrowsVisibility() {
+        if (maDiv.scrollWidth > maDiv.clientWidth) {
+            flecheGauche.style.display = 'block'; // Afficher la flèche gauche si le contenu nécessite un défilement
+            flecheDroite.style.display = 'block'; // Afficher la flèche droite si le contenu nécessite un défilement
+        } else {
+            flecheGauche.style.display = 'none'; // Masquer la flèche gauche si le contenu n'a pas besoin de défilement
+            flecheDroite.style.display = 'none'; // Masquer la flèche droite si le contenu n'a pas besoin de défilement
+        }
+    }
 
+    flecheGauche.addEventListener('click', () => {
+        smoothScrollTo(maDiv, maDiv.scrollLeft - maDiv.clientWidth, 500);
+    });
 
+    flecheDroite.addEventListener('click', () => {
+        smoothScrollTo(maDiv, maDiv.scrollLeft + maDiv.clientWidth, 500);
+    });
 
+    // Vérifier la visibilité des flèches au chargement et lors du redimensionnement de la fenêtre
+    window.addEventListener('load', checkArrowsVisibility);
+    window.addEventListener('resize', checkArrowsVisibility);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    initializeSmoothScrolling('slider1Div', 'slider1FlecheGauche', 'slider1FlecheDroite');
+    initializeSmoothScrolling('slider2Div', 'slider2FlecheGauche', 'slider2FlecheDroite');
+});
+
+function smoothScrollTo(element, destination, duration) {
+    const start = element.scrollLeft;
+    const difference = destination - start;
+    const startTime = performance.now();
+
+    function easeInOutQuad(time) {
+        return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+    }
+
+    function scroll(timestamp) {
+        const currentTime = timestamp - startTime;
+        const scrollTo = easeInOutQuad(currentTime / duration) * difference + start;
+        element.scrollLeft = scrollTo;
+
+        if (currentTime < duration) {
+            window.requestAnimationFrame(scroll);
+        }
+    }
+
+    window.requestAnimationFrame(scroll);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var showButton = document.getElementById('addButton');
+    var hideButton = document.getElementById('removeButton');
+    var element = document.getElementById('myElement');
+    var secondElement = document.getElementById('secondElement');
+
+    showButton.addEventListener('click', function() {
+        // Ajoute la classe CSS 'show' pour afficher l'élément
+        element.classList.add('highlight');
+        secondElement.classList.add('slide-in-left');
+        document.body.classList.add('no-scroll');
+    });
+
+    hideButton.addEventListener('click', function() {
+        // Supprime la classe CSS 'show' pour masquer l'élément
+        element.classList.remove('highlight');
+        secondElement.classList.remove('slide-in-left');
+        document.body.classList.remove('no-scroll');
+    });
+});
 
 
 
