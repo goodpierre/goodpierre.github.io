@@ -84,12 +84,41 @@ body.dark-mode {
   left: 0;
   background-color: rgba(0, 0, 0, 0.4); /* couleur de fond semi-transparente */
 
+  .modal-container-action{
+    width: 100%;
+    height: 100%;
+  }
+  #removeButton2 {
+    width: calc(100% - 250px);
+    height: 100%;
+  }
+
   .modal-content {
     background-color: var(--primary-bg-color-light);
     overflow-y: scroll;
     width: 250px;
     height: 100%;
     padding: 20px;
+
+    .rating {
+      display: inline-block;
+    }
+
+    .star {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      font-size: 12px;
+      color: var(--primary-surface-color-light);
+    }
+
+    .star.checked {
+      color: var(--on-surface-light);
+    }
+
+    .star:before {
+      content: '\2605';
+    }
 
     .container-skills {
       margin-top: 1rem;
@@ -104,10 +133,9 @@ body.dark-mode {
       span.skill {
         min-width: 100%;
         margin-bottom: 0.5rem;
-        border: 1px solid var(--on-background-light);
-        padding: 0.5rem;
-        border-radius: 3px;
+        padding: 0.5rem 0;
         display: block;
+        border-bottom: 1px solid var(--primary-surface-color-light);
       }
     }
 
@@ -151,7 +179,24 @@ body.dark-mode {
 
   }
 
+  .modal-content.dark-mode {
+    background-color: var(--primary-bg-color);
+
+    span.skill {
+      border-bottom: 1px solid var(--primary-surface-color);
+    }
+
+    .star {
+      color: var(--primary-surface-color);
+    }
+
+    .star.checked {
+      color: var(--on-surface);
+    }
+  }
+
   /* Works on Chrome, Edge, and Safari */
+
   .modal-content::-webkit-scrollbar {
     width: 6px;
   }
@@ -163,14 +208,6 @@ body.dark-mode {
   .modal-content::-webkit-scrollbar-thumb {
     background-color: var(--secondary-color-light);
     border-radius: 20px;
-  }
-
-  .modal-content.dark-mode{
-    background-color: var(--primary-bg-color);
-
-    span.skill{
-      border: 1px solid var(--on-background);
-    }
   }
 
   .modal-content.dark-mode::-webkit-scrollbar {
@@ -186,28 +223,6 @@ body.dark-mode {
     border-radius: 20px;
   }
 
-}
-
-.slide-in-left {
-  -webkit-animation: slide-in-left 0.3s both;
-  animation: slide-in-left 0.3s both;
-}
-
-@keyframes slide-in-left {
-  0% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.highlight {
-  display: block;
 }
 
 /*Header*/
@@ -557,7 +572,6 @@ header {
       overflow-x: scroll;
       padding: 0 0 1rem;
       position: relative;
-
       /*skills*/
 
       span {
@@ -850,6 +864,28 @@ header {
 }
 
 /*Animation*/
+
+.slide-in-left {
+  -webkit-animation: slide-in-left 0.3s both;
+  animation: slide-in-left 0.3s both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.highlight {
+  display: block;
+}
 
 #loader {
   background: RGBA(30, 30, 36, 0.9);

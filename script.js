@@ -156,6 +156,10 @@ function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
     const flecheGauche = document.getElementById(leftArrowId);
     const flecheDroite = document.getElementById(rightArrowId);
 
+    let isScrolling = false;
+    let startX;
+    let scrollLeft;
+
     // Fonction pour vérifier la visibilité des flèches
     function checkArrowsVisibility() {
         if (maDiv.scrollWidth > maDiv.clientWidth) {
@@ -168,17 +172,40 @@ function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
     }
 
     flecheGauche.addEventListener('click', () => {
-        smoothScrollTo(maDiv, maDiv.scrollLeft - maDiv.clientWidth, 500);
+        const scrollAmount = 100; // Set the desired number of pixels to scroll
+        smoothScrollTo(maDiv, maDiv.scrollLeft - scrollAmount, 500);
     });
 
     flecheDroite.addEventListener('click', () => {
-        smoothScrollTo(maDiv, maDiv.scrollLeft + maDiv.clientWidth, 500);
+        const scrollAmount = 100; // Set the desired number of pixels to scroll
+        smoothScrollTo(maDiv, maDiv.scrollLeft + scrollAmount, 500);
+    });
+
+    maDiv.addEventListener('mousedown', (event) => {
+        event.preventDefault();
+        isScrolling = true;
+        startX = event.pageX - maDiv.offsetLeft;
+        scrollLeft = maDiv.scrollLeft;
+    });
+
+    maDiv.addEventListener('mouseup', () => {
+        isScrolling = false;
+    });
+
+    maDiv.addEventListener('mousemove', (event) => {
+        if (!isScrolling) return;
+        event.preventDefault();
+        const x = event.pageX - maDiv.offsetLeft;
+        const walk = (x - startX) * 1; // Adjust the scroll speed by multiplying the difference
+        maDiv.scrollLeft = scrollLeft - walk;
     });
 
     // Vérifier la visibilité des flèches au chargement et lors du redimensionnement de la fenêtre
     window.addEventListener('load', checkArrowsVisibility);
     window.addEventListener('resize', checkArrowsVisibility);
 }
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
     initializeSmoothScrolling('slider1Div', 'slider1FlecheGauche', 'slider1FlecheDroite');
@@ -210,6 +237,7 @@ function smoothScrollTo(element, destination, duration) {
 document.addEventListener('DOMContentLoaded', function() {
     var showButton = document.getElementById('addButton');
     var hideButton = document.getElementById('removeButton');
+    var hideButton2 = document.getElementById('removeButton2');
     var element = document.getElementById('myElement');
     var secondElement = document.getElementById('secondElement');
 
@@ -220,20 +248,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('no-scroll');
     });
 
-    element.addEventListener('click', function() {
-        // Supprime la classe CSS 'highlight' pour masquer l'élément
-        element.classList.remove('highlight');
-        secondElement.classList.remove('slide-in-left');
-        document.body.classList.remove('no-scroll');
-    });
-
     hideButton.addEventListener('click', function() {
         // Supprime la classe CSS 'highlight' pour masquer l'élément
         element.classList.remove('highlight');
         secondElement.classList.remove('slide-in-left');
         document.body.classList.remove('no-scroll');
     });
+
+    hideButton2.addEventListener('click', function() {
+        // Supprime la classe CSS 'highlight' pour masquer l'élément
+        element.classList.remove('highlight');
+        secondElement.classList.remove('slide-in-left');
+        document.body.classList.remove('no-scroll');
+    });
 });
+
+
 
 
 
