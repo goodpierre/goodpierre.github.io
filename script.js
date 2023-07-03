@@ -123,16 +123,26 @@ function toggleElements(tag) {
     activeSpan.classList.add('active');
 }
 
+function stopVideos(container) {
+    var videos = container.querySelectorAll('video');
+    videos.forEach(function (video) {
+        video.pause();
+        video.currentTime = 0;
+    });
+}
+
 function toggleDivs(activeIndex) {
     var divs = document.querySelectorAll('.box');
 
     divs.forEach(function (div, index) {
+        var video = div.querySelector('video');
+
         if (index === activeIndex - 1) {
             div.classList.remove('hidden');
-            stopVideos(div);
+            video.load(); // Réinitialise la vidéo pour la lire depuis le début
         } else {
             div.classList.add('hidden');
-            stopVideos(div);
+            stopVideos(div); // Arrête les vidéos dans les autres éléments
         }
     });
 
@@ -143,13 +153,7 @@ function toggleDivs(activeIndex) {
     });
 }
 
-function stopVideos(container) {
-    var videos = container.querySelectorAll('video');
-    videos.forEach(function (video) {
-        video.pause();
-        video.currentTime = 0;
-    });
-}
+
 
 function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
     const maDiv = document.getElementById(divId);
@@ -204,8 +208,6 @@ function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
     window.addEventListener('load', checkArrowsVisibility);
     window.addEventListener('resize', checkArrowsVisibility);
 }
-
-
 
 window.addEventListener('DOMContentLoaded', () => {
     initializeSmoothScrolling('slider1Div', 'slider1FlecheGauche', 'slider1FlecheDroite');
