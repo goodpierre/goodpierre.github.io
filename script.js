@@ -139,20 +139,20 @@ function toggleDivs(activeIndex) {
 
         if (index === activeIndex - 1) {
             div.classList.remove('hidden');
-            video.load(); // Réinitialise la vidéo pour la lire depuis le début
+            video.load();
+            video.autoplay = true; // Ajoute l'autoplay à la vidéo
         } else {
             div.classList.add('hidden');
-            stopVideos(div); // Arrête les vidéos dans les autres éléments
+            stopVideos(div);
+            video.autoplay = false; // Désactive l'autoplay pour les autres vidéos
         }
     });
 
-    // Remonter en haut de la page
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 }
-
 
 
 function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
