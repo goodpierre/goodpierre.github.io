@@ -161,16 +161,22 @@ body.dark-mode {
     }
 
     svg {
-      fill: var(--on-surface-light);
+      cursor: pointer;
       width: auto;
       height: auto;
       margin-left: 0.5rem;
       position: relative;
       top: -3.5px;
+
+      .reset {
+        fill: var(--on-surface-light);
+      }
     }
 
     svg.dark-mode {
-      fill: var(--on-surface);
+      .reset {
+        fill: var(--on-surface);
+      }
     }
 
     .action {
@@ -251,17 +257,22 @@ header {
   padding: 16px 30px 16px 30px;
 
   svg {
-    fill: var(--on-surface-light);
     cursor: pointer;
     width: auto;
     height: auto;
     margin-left: 0.5rem;
     position: relative;
     top: -3.5px;
+
+    .reset {
+      fill: var(--on-surface-light);
+    }
   }
 
   svg.dark-mode {
-    fill: var(--on-surface);
+    .reset {
+      fill: var(--on-surface);
+    }
   }
 
   .action {
