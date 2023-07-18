@@ -13,17 +13,6 @@ window.onload = function () {
     loader.style.display = 'none';
 };
 
-const texts = ["Magie en cours... Abracadabra, bientôt prêt !", "Attendez un instant, ça va swinguer ! ", "Nos petits lutins numériques s'activent !", "Un moment, on peaufine les détails pour vous ! "];
-let index = 0;
-
-function changeText() {
-    const changingText = document.getElementById("changing-text");
-    changingText.innerHTML = `<span class="focus-in-expand">${texts[index]}</span>`;
-
-    index = (index + 1) % texts.length;
-}
-
-setInterval(changeText, 2500);
 function myFunctionCollapse() {
     var x = document.getElementById("collapse");
     var paragraph = document.getElementById("collapseParagraph");
