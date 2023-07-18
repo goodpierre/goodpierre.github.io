@@ -2,33 +2,42 @@ document.addEventListener('DOMContentLoaded', function () {
     var loader = document.getElementById('loader');
     var body = document.body;
 
-    // Ajouter la classe 'no-scroll' au body lors du chargement
     body.classList.add('no-scroll');
-
-    setTimeout(function () {
-        // Supprimer la classe 'no-scroll' après le délai spécifié
-        body.classList.remove('no-scroll');
-        // Cacher le loader
-        loader.style.display = 'none';
-    }, 2000); // Définissez la durée du délai en millisecondes (dans cet exemple, 2000 ms soit 2 secondes)
 });
 
+window.onload = function () {
+    var loader = document.getElementById('loader');
+    var body = document.body;
+
+    body.classList.remove('no-scroll');
+    loader.style.display = 'none';
+};
+
+const texts = ["Magie en cours... Abracadabra, bientôt prêt !", "Attendez un instant, ça va swinguer ! ", "Nos petits lutins numériques s'activent !", "Un moment, on peaufine les détails pour vous ! "];
+let index = 0;
+
+function changeText() {
+    const changingText = document.getElementById("changing-text");
+    changingText.innerHTML = `<span class="focus-in-expand">${texts[index]}</span>`;
+
+    index = (index + 1) % texts.length;
+}
+
+setInterval(changeText, 2500);
 function myFunctionCollapse() {
     var x = document.getElementById("collapse");
     var paragraph = document.getElementById("collapseParagraph");
 
     if (x.style.maxHeight) {
-        // Si le contenu est déjà étendu, on le réduit
         x.style.maxHeight = null;
-        paragraph.innerHTML = "Plus"; // Remplacer le texte du paragraphe par "Read More"
+        paragraph.innerHTML = "Plus";
     } else {
-        // Si le contenu est réduit, on l'étend pour afficher le texte complet
         x.style.maxHeight = x.scrollHeight + "px";
-        paragraph.innerHTML = "Moins"; // Remplacer le texte du paragraphe par "Read Less"
+        paragraph.innerHTML = "Moins";
     }
 }
 
-function myFunctionCollapse2(className) {
+function myFunctionCollapse2() {
     const elements = document.getElementsByClassName("collapse2");
     Array.from(elements).forEach((x) => {
         if (x.style.maxHeight) {
@@ -49,13 +58,6 @@ function toggleMode() {
             element.classList.add('dark-mode');
         }
     });
-}
-
-function reduceVolume() {
-    const video = document.getElementById('myVideo');
-    if (video) {
-        video.volume = 0.2;
-    }
 }
 
 function toggleFullscreen() {
@@ -123,28 +125,16 @@ function toggleElements(tag) {
     activeSpan.classList.add('active');
 }
 
-function stopVideos(container) {
-    var videos = container.querySelectorAll('video');
-    videos.forEach(function (video) {
-        video.pause();
-        video.currentTime = 0;
-    });
-}
-
 function toggleDivs(activeIndex) {
     var divs = document.querySelectorAll('.box');
 
     divs.forEach(function (div, index) {
-        var video = div.querySelector('video');
-
         if (index === activeIndex - 1) {
             div.classList.remove('hidden');
-            video.load();
-            video.autoplay = true; // Ajoute l'autoplay à la vidéo
+            playVideo(div);
         } else {
             div.classList.add('hidden');
-            stopVideos(div);
-            video.autoplay = false; // Désactive l'autoplay pour les autres vidéos
+            pauseVideo(div);
         }
     });
 
@@ -154,6 +144,27 @@ function toggleDivs(activeIndex) {
     });
 }
 
+function playVideo(div) {
+    var iframe = div.querySelector('iframe');
+    if (iframe) {
+        var videoUrl = iframe.getAttribute('src');
+        if (videoUrl.indexOf('autoplay=0') !== -1) {
+            videoUrl = videoUrl.replace('autoplay=0', 'autoplay=1');
+            iframe.setAttribute('src', videoUrl);
+        }
+    }
+}
+
+function pauseVideo(div) {
+    var iframe = div.querySelector('iframe');
+    if (iframe) {
+        var videoUrl = iframe.getAttribute('src');
+        if (videoUrl.indexOf('autoplay=1') !== -1) {
+            videoUrl = videoUrl.replace('autoplay=1', 'autoplay=0');
+            iframe.setAttribute('src', videoUrl);
+        }
+    }
+}
 
 function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
     const maDiv = document.getElementById(divId);
@@ -164,24 +175,23 @@ function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
     let startX;
     let scrollLeft;
 
-    // Fonction pour vérifier la visibilité des flèches
     function checkArrowsVisibility() {
         if (maDiv.scrollWidth > maDiv.clientWidth) {
-            flecheGauche.style.display = 'block'; // Afficher la flèche gauche si le contenu nécessite un défilement
-            flecheDroite.style.display = 'block'; // Afficher la flèche droite si le contenu nécessite un défilement
+            flecheGauche.style.display = 'block';
+            flecheDroite.style.display = 'block';
         } else {
-            flecheGauche.style.display = 'none'; // Masquer la flèche gauche si le contenu n'a pas besoin de défilement
-            flecheDroite.style.display = 'none'; // Masquer la flèche droite si le contenu n'a pas besoin de défilement
+            flecheGauche.style.display = 'none';
+            flecheDroite.style.display = 'none';
         }
     }
 
     flecheGauche.addEventListener('click', () => {
-        const scrollAmount = 100; // Set the desired number of pixels to scroll
+        const scrollAmount = 100;
         smoothScrollTo(maDiv, maDiv.scrollLeft - scrollAmount, 500);
     });
 
     flecheDroite.addEventListener('click', () => {
-        const scrollAmount = 100; // Set the desired number of pixels to scroll
+        const scrollAmount = 100;
         smoothScrollTo(maDiv, maDiv.scrollLeft + scrollAmount, 500);
     });
 
@@ -200,11 +210,10 @@ function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
         if (!isScrolling) return;
         event.preventDefault();
         const x = event.pageX - maDiv.offsetLeft;
-        const walk = (x - startX) * 1; // Adjust the scroll speed by multiplying the difference
+        const walk = (x - startX) * 1;
         maDiv.scrollLeft = scrollLeft - walk;
     });
 
-    // Vérifier la visibilité des flèches au chargement et lors du redimensionnement de la fenêtre
     window.addEventListener('load', checkArrowsVisibility);
     window.addEventListener('resize', checkArrowsVisibility);
 }
@@ -236,29 +245,26 @@ function smoothScrollTo(element, destination, duration) {
     window.requestAnimationFrame(scroll);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var showButton = document.getElementById('addButton');
     var hideButton = document.getElementById('removeButton');
     var hideButton2 = document.getElementById('removeButton2');
     var element = document.getElementById('myElement');
     var secondElement = document.getElementById('secondElement');
 
-    showButton.addEventListener('click', function() {
-        // Ajoute la classe CSS 'highlight' pour afficher l'élément
+    showButton.addEventListener('click', function () {
         element.classList.add('highlight');
         secondElement.classList.add('slide-in-left');
         document.body.classList.add('no-scroll');
     });
 
-    hideButton.addEventListener('click', function() {
-        // Supprime la classe CSS 'highlight' pour masquer l'élément
+    hideButton.addEventListener('click', function () {
         element.classList.remove('highlight');
         secondElement.classList.remove('slide-in-left');
         document.body.classList.remove('no-scroll');
     });
 
-    hideButton2.addEventListener('click', function() {
-        // Supprime la classe CSS 'highlight' pour masquer l'élément
+    hideButton2.addEventListener('click', function () {
         element.classList.remove('highlight');
         secondElement.classList.remove('slide-in-left');
         document.body.classList.remove('no-scroll');
