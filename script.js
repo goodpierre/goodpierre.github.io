@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var body = document.body;
 
     body.classList.add('no-scroll');
+    createYouTubePlayer(videoIds[0], 'player0'); // Créer et lire automatiquement la première vidéo
 });
 
 window.onload = function () {
