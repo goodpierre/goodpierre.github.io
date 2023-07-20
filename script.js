@@ -114,16 +114,51 @@ function toggleElements(tag) {
     activeSpan.classList.add('active');
 }
 
+var apiKey = 'AIzaSyAzo6ZWsRIgz1Rh6N4BJPxGWrLqwiMfIR8';
+
+var videoIds = [
+    'ymEEtztYZCM', 'JLrdzv2fADA', 'ZuHmKU9ALKw', 'Ofyj6JjdiYA', 'bevH0MbOt90', '8bkbf6vWPBA', 'UPBb9YMhJY4', 'pNDGYlI9N7Q', '045U4OsqFkk', 'E8BsztXiUgs', 'N-0SwjclxiE', 'wjjWOZ-RLms'
+];
+
+var players = {};
+
+function createYouTubePlayer(videoId, playerDivId) {
+    var player = new YT.Player(playerDivId, {
+        height: '360',
+        width: '640',
+        videoId: videoId,
+        playerVars: {
+            'key': apiKey,
+            'rel': 0,
+            'modestbranding': 1,
+            'autoplay': 1
+        },
+    });
+
+    players[playerDivId] = player;
+}
+
 function toggleDivs(activeIndex) {
     var divs = document.querySelectorAll('.box');
 
     divs.forEach(function (div, index) {
         if (index === activeIndex - 1) {
             div.classList.remove('hidden');
-            playVideo(div);
+            var playerDivId = 'player' + (activeIndex - 1);
+            if (!players[playerDivId]) {
+                var videoId = videoIds[activeIndex - 1];
+                createYouTubePlayer(videoId, playerDivId);
+            } else {
+
+                players[playerDivId].playVideo();
+            }
         } else {
             div.classList.add('hidden');
-            pauseVideo(div);
+            var playerDivId = 'player' + index;
+            if (players[playerDivId]) {
+                // Si le lecteur vidéo existe, arrêtez la vidéo
+                players[playerDivId].pauseVideo();
+            }
         }
     });
 
@@ -133,26 +168,17 @@ function toggleDivs(activeIndex) {
     });
 }
 
-function playVideo(div) {
-    var iframe = div.querySelector('iframe');
-    if (iframe) {
-        var videoUrl = iframe.getAttribute('src');
-        if (videoUrl.indexOf('autoplay=0') !== -1) {
-            videoUrl = videoUrl.replace('autoplay=0', 'autoplay=1');
-            iframe.setAttribute('src', videoUrl);
+function onYouTubeIframeAPIReady() {
+    var divs = document.querySelectorAll('.box');
+    divs.forEach(function (div, index) {
+        if (index !== 0) {
+            div.classList.add('hidden');
         }
-    }
-}
+    });
 
-function pauseVideo(div) {
-    var iframe = div.querySelector('iframe');
-    if (iframe) {
-        var videoUrl = iframe.getAttribute('src');
-        if (videoUrl.indexOf('autoplay=1') !== -1) {
-            videoUrl = videoUrl.replace('autoplay=1', 'autoplay=0');
-            iframe.setAttribute('src', videoUrl);
-        }
-    }
+    var videoId = videoIds[0];
+    var playerDivId = 'player0';
+    createYouTubePlayer(videoId, playerDivId);
 }
 
 function initializeSmoothScrolling(divId, leftArrowId, rightArrowId) {
