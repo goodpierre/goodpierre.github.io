@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var body = document.body;
 
     body.classList.add('no-scroll');
-    createYouTubePlayer(videoIds[0], 'player0'); // Créer et lire automatiquement la première vidéo
+    createYouTubePlayer(videoIds[0], 'player0');
 });
 
 window.onload = function () {
@@ -104,7 +104,6 @@ function toggleElements(tag) {
         }
     }
 
-    // Gérer les classes actives des spans
     var spans = document.querySelectorAll('span.myTagBtn');
     for (var i = 0; i < spans.length; i++) {
         var span = spans[i];
@@ -115,7 +114,7 @@ function toggleElements(tag) {
     activeSpan.classList.add('active');
 }
 
-var apiKey = 'AIzaSyAzo6ZWsRIgz1Rh6N4BJPxGWrLqwiMfIR8';
+var apiKey = '';
 
 var videoIds = [
     'ymEEtztYZCM', 'JLrdzv2fADA', 'ZuHmKU9ALKw', 'Ofyj6JjdiYA', 'bevH0MbOt90', '8bkbf6vWPBA', 'UPBb9YMhJY4', 'pNDGYlI9N7Q', '045U4OsqFkk', 'E8BsztXiUgs', 'N-0SwjclxiE', 'wjjWOZ-RLms'
@@ -157,7 +156,6 @@ function toggleDivs(activeIndex) {
             div.classList.add('hidden');
             var playerDivId = 'player' + index;
             if (players[playerDivId]) {
-                // Si le lecteur vidéo existe, arrêtez la vidéo
                 players[playerDivId].pauseVideo();
             }
         }
