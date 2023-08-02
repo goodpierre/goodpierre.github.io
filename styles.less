@@ -356,15 +356,6 @@ body {
           transition: background-color 0.2s;
           font-size: 14px;
 
-          &.dark-mode {
-            color: var(--on-surface);
-            background: var(--primary-surface-color);
-          }
-
-          &:hover,
-          &.dark-mode:hover {
-            background: var(--secondary-surface-color-light);
-          }
         }
 
         .mail {
@@ -375,6 +366,14 @@ body {
             color: var(--on-secondary);
             background: var(--secondary-color);
           }
+
+          &.dark-mode:hover {
+            background: var(--secondary-surface-color-light);
+          }
+
+          &:hover{
+            background: var(--tertiary-color-light);
+          }
         }
 
         .phone {
@@ -384,6 +383,14 @@ body {
           &.dark-mode {
             color: var(--on-surface);
             background: var(--primary-surface-color);
+          }
+
+          &.dark-mode:hover {
+            background: var(--secondary-surface-color);
+          }
+
+          &:hover{
+            background: var(--secondary-surface-color-light);
           }
         }
       }
