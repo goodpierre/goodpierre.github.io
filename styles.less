@@ -282,7 +282,7 @@ body {
 
 /* Container */
 .container-main {
-  max-width: 1400px;
+  max-width: 1800px;
   margin: 0 auto 1rem;
 
   .container-main-left {
@@ -308,6 +308,7 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 10px;
       }
     }
 
@@ -456,7 +457,8 @@ body {
       p {
         margin: 0;
         font-size: 14px;
-        a{
+
+        a {
           text-decoration: underline;
           color: #3DA6FF;
         }
@@ -614,6 +616,7 @@ body {
         transition: transform 0.2s;
 
         .container-img-achievements {
+          transition: 0.3s;
           width: 168px;
           height: 100Px;
           margin-right: 0.5rem;
@@ -664,6 +667,10 @@ body {
         &.dark-mode:hover {
           background: var(--primary-surface-color);
         }
+      }
+
+      .achievements:hover .container-img-achievements {
+        border-radius: 0;
       }
     }
 
